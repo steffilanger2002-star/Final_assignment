@@ -1,0 +1,65 @@
+Solutions Plan: Solar System GUI Program
+1. Purpose
+The purpose of this program is to allow users get information about planets in the solar system. Users can ask questions about a planet's mass, distance from the Sun, number of moons, or view all available information. The program also allows direct access to planet information via buttons in a GUI built using Tkinter.
+The program uses classes, JSON data storage, and input validation.
+2. Data Structure
+Planet Class
+
+A Planet class is defined with the following attributes:
+Attribute	Type	Description	Example
+Name	String	Name of the Planet	Earth
+Mass	String	Mass of the Planet	5.97 x 10^24 kg
+Distance	String	Distance form the Sun	149.6 million km
+Moons	List of Strings	List of the planet’s Moons	Moon
+
+info() → Returns all planet information as a formatted string.
+Data Storage
+Planets are stored in a JSON file (planet.json) to separate raw data from code.
+Planet objects are loaded into a dictionary for quick lookup by name.
+
+3. User Interface (GUI)
+Tkinter Components:
+Main Window – titled “Final Assignment Solar System”, size 800x800.
+Text Box (tk.Text) – displays answers to user questions.
+Entry Field (tk.Entry) – allows users to type questions.
+Ask Button – triggers the function to process the user’s question.
+Planet Buttons – buttons for each planet to directly display its information.
+
+Behavior:
+Clicking a planet button displays all available info about that planet.
+Typing a question in the entry field and pressing “Ask” processes the input.
+
+4. Program Logic
+Step 1: User Input
+Input is converted to lowercase and stripped of leading/trailing spaces.
+If input is empty → display: "Please ask a question about the solar system."
+
+Step 2: Identify Planets Mentioned
+Check if any planet name exists in the input string.
+Multiple planets can be mentioned; all matches are added to a list found_planets.
+If no planets found → display: "I could not find a planet in your question."
+If input contains only a planet name without a question → display: "I understood the planet but not what information you want."
+
+Step 3: Determine Information Requested
+Because the user input is written in natural language it’s impossible to predict the exact wording of a question (e.g “How far is Saturn from the sun? “What is Saturns distance from the Sun?) Instead of checking for one fixed sentence, the program uses keyword-based-detection. SO it looks for the most commonly used words that will likely indicate what information the user wants.
+Moons: check for "moon" or "moons" in the input.
+0 moons → "Planet has no moons."
+1 moon → "Planet has 1 moon. It is: Moon"
+Multiple moons → "Planet has X moons. They are: Moon1, Moon2…"
+Distance: check for "distance" or "far" → display distance from Sun
+Mass: check for "mass",  "massive", "size", "big" → display mass
+Everything: check for "everything" or "all" → display all planet information
+Unknown info request: if planet is found but query is unclear → display: "I understood the planet but not what information you want."
+
+Step 5: Display Output
+Insert the answer string.
+
+5. Input Validation
+Check for empty input → Ensure planets exist in the dataset →  Handle multiple planet queries → Provide meaningful messages for unknown or invalid questions →  Case-insensitive matching for planet names
+
+6. Test Plan
+The program is tested for key cases using a separate test plan (test_plan.txt) with expected results.
+
+8. Summary
+This solution uses classes, JSON data, and a Tkinter GUI to provide an interactive experience for querying planet information. It validates input, handles multiple planets, and includes clear messages for missing or incorrect queries. 
+The program still has limitations: A user can input multiple planets but if they input multiple planets and multiple questions only the first one will be answered for all planets. Similarly if Pluto gets mentioned with other planets they will be ignored and it will be printed that Pluto is not a planet.  
