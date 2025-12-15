@@ -1,0 +1,70 @@
+Test Plan - Final Assignment
+
+Text 1: Empty input
+Input""
+Expected result:
+Program displays:  "Please ask a question about the solar system"
+
+Test 2: Planet is input without a question
+Input: "Neptune"
+Expected result: 
+Program displays: "I understood the planet but not what information you want"
+
+Test 3: Asking a question without a planet
+Input: "What is the mass of"
+Expected result: 
+Program displays: "I could not find a planet in your question"
+
+Test 4: Moons if there are none
+Input: "How many moons does Mercury have?"
+Expected result:
+Program displays: "Mercury has no moons"
+
+Test 5: Moons if there is only one
+Input: "How many moons does Earth have?"
+Expected result:
+Program displays: "Earth has 1 moon. It is: Moon"
+
+Test 6: Moons if there are multiple
+Input: "How many moons does Uranus have?"
+Expected result:
+Program displays: "Uranus has 2 moons. They are: Miranda,Ariel"
+
+Test 7: distance
+Input: "How far is Earth from the sun?" / "What is Earth's distance from the sun?"
+Expected result: "Earth is 149.6 million km from the Sun."
+
+Test 8: mass
+Input: "What is Uranus mass?" / "How heavy is Uranus?"
+Expected result: 
+Program displays: "The mass of Uranus is 8.68x10^25 kg."
+
+Test 8: Everything 
+Input: "Tell me everything about Mars."
+Expected result: 
+Program displays:"Name: Mars
+Mass: 6.42 x 10^23 kg
+Distance from Sun: 227.9 million km
+Moons: Phobos,Deimos"
+
+Test 9: Asking questions about two planets
+Input: "What are Earth and Mars moons?"
+Expected result:
+Program displays: "Earth has one moon.
+It is: Moon 
+
+Mars has 2 Moons.
+They are: Phobos,Deimos"
+
+Test 10: Pluto
+Input: "Is Pluto a planet?"
+Expected result:
+Program displays: "Pluto is not in the list of planets because it is classified as a dwarf planet."
+
+Test 11: Buttons
+Click Mars Button
+Expected result:
+Program displays:"Name: Mars
+Mass: 6.42 x 10^23 kg
+Distance from Sun: 227.9 million km
+Moons: Phobos,Deimos"

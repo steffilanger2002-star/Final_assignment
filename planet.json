@@ -1,0 +1,60 @@
+{
+    "Mercury": {
+        "mass": "3.30 × 10^23 kg",
+        "distance": "57.9 million km",
+        "moons": []
+    },
+    "Venus": {
+        "mass": "4.87 × 10^24 kg",
+        "distance": "108.2 million km",
+        "moons": []
+    },
+    "Earth": {
+        "mass": "5.97 × 10^24 kg",
+        "distance": "149.6 million km",
+        "moons": [
+            "Moon"
+        ]
+    },
+    "Mars": {
+        "mass": "6.42 × 10^23 kg",
+        "distance": "227.9 million km",
+        "moons": [
+            "Phobos",
+            "Deimos"
+        ]
+    },
+    "Jupiter": {
+        "mass": "1.90 × 10^27 kg",
+        "distance": "778.5 million km",
+        "moons": [
+            "Io",
+            "Europa",
+            "Ganymede",
+            "Callisto"
+        ]
+    },
+    "Saturn": {
+        "mass": "5.68 × 10^26 kg",
+        "distance": "1.43 billion km",
+        "moons": [
+            "Titan",
+            "Enceladus"
+        ]
+    },
+    "Uranus": {
+        "mass": "8.68 × 10^25 kg",
+        "distance": "2.87 billion km",
+        "moons": [
+            "Miranda",
+            "Ariel"
+        ]
+    },
+    "Neptune": {
+        "mass": "1.02 × 10^26 kg",
+        "distance": "4.50 billion km",
+        "moons": [
+            "Triton"
+        ]
+    }
+}
